@@ -1,25 +1,145 @@
-<main style="font-family:system-ui;padding:2rem;line-height:1.6;max-width:720px;margin:auto;text-align:center">
-  <h1 style="font-size:2.5rem;font-weight:700">
-    Hello Brentwood Web Designers 👋
-  </h1>
-  <p style="font-size:1.25rem;margin-top:1rem">
-    You ready to hack away???
-  </p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Collective Growth Coaching — Individual & Family Coaching</title>
+  <meta name="description" content="Collective Growth Coaching helps teens, young adults, parents, and families build skills, strengthen communication, and create healthy routines through strengths-based coaching." />
+  <link rel="icon" href="/favicon.ico" />
 
-  <p style="margin-top:2rem">
-    This site is deployed on <strong>Vercel</strong> using <em>Serverless Functions</em> — no installs, no setup, just creativity and code.
-  </p>
+  <!-- Open Graph / SEO -->
+  <meta property="og:title" content="Collective Growth Coaching" />
+  <meta property="og:description" content="Individual & family coaching to build skills, communication, and confidence." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://your-domain.vercel.app/" />
+  <meta property="og:image" content="/og-image.jpg" />
 
-  <p style="margin-top:2rem">
-    Try your first API endpoint:  
-    <a href="/api/hello" style="font-weight:600;color:#0051ff">/api/hello</a>
-  </p>
+  <!-- Tailwind CSS via CDN (good for quick deploys). For production, consider compiling. -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              50: '#eefaf6', 100: '#d6efe7', 200: '#b0e0d1', 300: '#84ccb7', 400: '#5bb9a1', 500: '#37a48c', 600: '#278974', 700: '#1f6e5e', 800: '#1b5a4d', 900: '#16493f'
+            },
+            ink: '#0b1220'
+          },
+          fontFamily: {
+            display: ['Inter', 'ui-sans-serif', 'system-ui', 'Segoe UI', 'Roboto', 'Arial', 'sans-serif'],
+            body: ['Inter', 'ui-sans-serif', 'system-ui', 'Segoe UI', 'Roboto', 'Arial', 'sans-serif']
+          },
+          boxShadow: {
+            soft: '0 10px 25px rgba(2, 32, 71, 0.08)'
+          }
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
-  <hr style="margin:2rem 0">
+  <!-- Schema.org JSON-LD (CoachingService) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Collective Growth Coaching",
+    "image": "/og-image.jpg",
+    "description": "Individual & family coaching to improve communication, routines, and resilience.",
+    "url": "https://your-domain.vercel.app/",
+    "telephone": "+1-310-555-0101",
+    "areaServed": "Los Angeles, CA",
+    "sameAs": [],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Los Angeles",
+      "addressRegion": "CA",
+      "postalCode": "",
+      "addressCountry": "US"
+    }
+  }
+  </script>
 
-  <p style="font-size:0.95rem;color:#555">
-    Tip: Set an environment variable named <code>GREETING_NAME</code> in  
-    <strong>Vercel → Project → Settings → Environment Variables</strong>, then redeploy.  
-    Your API will greet you personally next time 🚀
-  </p>
-</main>
+  <style>
+    /* Smooth fade for section reveals (optional) */
+    .fade-in { animation: fadeIn 0.7s ease both; }
+    @keyframes fadeIn { from {opacity: 0; transform: translateY(8px);} to {opacity:1; transform: none;} }
+  </style>
+</head>
+<body class="min-h-screen bg-white text-ink font-body">
+  <!-- Header -->
+  <header class="sticky top-0 z-40 bg-white/85 backdrop-blur supports-[backdrop-filter]:bg-white/60 border-b border-slate-100">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex h-16 items-center justify-between">
+        <a href="#" class="flex items-center gap-2">
+          <span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-primary-100 text-primary-700 font-semibold">CG</span>
+          <span class="font-semibold tracking-tight">Collective Growth Coaching</span>
+        </a>
+        <nav class="hidden md:block">
+          <ul class="flex items-center gap-8 text-sm">
+            <li><a class="hover:text-primary-700" href="#services">Services</a></li>
+            <li><a class="hover:text-primary-700" href="#about">About</a></li>
+            <li><a class="hover:text-primary-700" href="#process">Process</a></li>
+            <li><a class="hover:text-primary-700" href="#testimonials">Results</a></li>
+            <li><a class="hover:text-primary-700" href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <a href="#contact" class="hidden md:inline-flex rounded-xl bg-primary-600 px-4 py-2 text-sm font-semibold text-white shadow-soft hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2">Book a Free Consult</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative isolate overflow-hidden bg-gradient-to-b from-primary-50 to-white">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 lg:py-28 grid lg:grid-cols-2 gap-12 items-center">
+      <div class="fade-in">
+        <h1 class="text-4xl md:text-5xl font-semibold leading-tight tracking-tight">Coaching for <span class="text-primary-700">Individuals</span> & <span class="text-primary-700">Families</span></h1>
+        <p class="mt-5 text-slate-700 max-w-xl">Practical, strengths-based coaching to build skills, improve communication, and create healthy routines. Designed for teens, young adults, parents, and whole families.</p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="#contact" class="rounded-xl bg-primary-600 px-5 py-3 text-white font-medium shadow-soft hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2">Start with a Free Call</a>
+          <a href="#services" class="rounded-xl border border-slate-300 px-5 py-3 font-medium hover:border-primary-400 hover:text-primary-700">Explore Services</a>
+        </div>
+        <ul class="mt-6 text-sm text-slate-600 space-y-1">
+          <li>• Flexible sessions: virtual or in-home (LA area)</li>
+          <li>• Collaborative goals & measurable progress</li>
+          <li>• Coaching only (not psychotherapy)</li>
+        </ul>
+      </div>
+      <div class="fade-in lg:justify-self-end">
+        <div class="relative aspect-[4/3] w-full max-w-lg overflow-hidden rounded-2xl border border-slate-200 shadow-soft">
+          <!-- Placeholder illustration -->
+          <svg viewBox="0 0 600 450" xmlns="http://www.w3.org/2000/svg" class="h-full w-full">
+            <defs>
+              <linearGradient id="g" x1="0" x2="1">
+                <stop offset="0%" stop-color="#b0e0d1"/>
+                <stop offset="100%" stop-color="#37a48c"/>
+              </linearGradient>
+            </defs>
+            <rect width="600" height="450" fill="#f4faf8"/>
+            <circle cx="160" cy="220" r="110" fill="url(#g)" opacity="0.35"/>
+            <circle cx="360" cy="190" r="140" fill="url(#g)" opacity="0.2"/>
+            <g fill="#1f6e5e" opacity="0.9">
+              <rect x="110" y="250" width="110" height="20" rx="10"/>
+              <rect x="240" y="250" width="250" height="20" rx="10"/>
+              <rect x="110" y="290" width="380" height="16" rx="8"/>
+              <rect x="110" y="320" width="320" height="16" rx="8"/>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="py-20">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="max-w-2xl">
+        <h2 class="text-3xl font-semibold tracking-tight">Services</h2>
+        <p class="mt-3 text-slate-700">Two ways to work together. Every plan is customized with clear goals and simple, sustainable actions.</p>
+      </div>
+      <div class="mt-10 grid gap-6 md:grid-cols-2">
+        <!-- Individual Coaching -->
+        <div class="rounded-2xl border border-slate-200 p-6 shadow-soft">
+          <div class="flex items-center gap-3">
+            <span class="inline-flex h-10 w-10 items-center
